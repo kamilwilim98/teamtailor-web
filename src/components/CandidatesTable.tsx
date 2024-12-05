@@ -41,6 +41,7 @@ function CandidatesTable({
   } | null>(null);
 
   const handleSort = (key: keyof Candidate) => {
+    setPage(0);
     const direction =
       sortConfig?.key === key && sortConfig.direction === "asc"
         ? "desc"
